@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "code-with-mosh": {
+    "angular-7-basics": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/code-with-mosh",
+            "outputPath": "dist/angular-7-basics",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "code-with-mosh:build"
+            "browserTarget": "angular-7-basics:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "code-with-mosh:build:production"
+              "browserTarget": "angular-7-basics:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "code-with-mosh:build"
+            "browserTarget": "angular-7-basics:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "code-with-mosh-e2e": {
+    "angular-7-basics-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "code-with-mosh:serve"
+            "devServerTarget": "angular-7-basics:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "code-with-mosh:serve:production"
+              "devServerTarget": "angular-7-basics:serve:production"
             }
           }
         },
@@ -136,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "code-with-mosh"
+  "defaultProject": "angular-7-basics"
 }
