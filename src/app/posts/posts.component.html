@@ -1,0 +1,29 @@
+<div>
+
+  <div class="form-group">
+    <label for="title">Add Post</label>
+    <input type="text" id="title" name="title" class="form-control" (keyup.enter)="addPost(title)" #title>
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between" *ngFor="let post of posts">
+
+      <div class="">
+        {{ post.title }}
+      </div>
+
+      <div>
+         <button
+        (click)="updatePost(post)"
+        class="btn btn-outline-primary btn-sm">
+          Update
+      </button>
+      &nbsp;
+        <button
+        (click)="deletePost(post)"
+        class="btn btn-sm btn-outline-danger">
+          Delete
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>
